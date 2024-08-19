@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cord</title>
+    <!-- <style>
+        section {
+            width: 100vw;
+            height: 580vh;
+            color: #eacccc;
+            margin: 20px;
+            padding: 20px;
+        }
+        .m1 {
+            width: 600px;
+            height: 400px;
+            background-image: url(m1.png);
+            position: relative;
+        }
+        #master {
+            position: absolute;
+            margin-top: 50px;
+            right: 50px;
+            width: 150px;
+            height: 150px;
+        }
+        form {
+            position: absolute;
+            bottom: 100px;
+            margin-left: 50px;
+        }
+        .m1 p {
+            position: absolute;
+            bottom:-75px;
+            margin-left: 0px;
+            font-size: 30px;
+            font-style: italic;
+        }
+        #input1 {
+            width: 300px;
+            height: 35px;
+        }
+        #input2 {
+            width: 100px;
+            height: 35px;
+        }
+    </style> -->
+</head>
+<body>
+    <section>
+        <div class="m1">
+            <img id="master" src="master.png" alt="">
+            <form action="">
+                <input id="input1" type="text" placeholder="Enter Code"> 
+                <input id="input2" type="text" placeholder="CCV">
+                <p> Mahmoud Sabry</p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const input1 = document.getElementById('input1');
+        const masterImage = document.getElementById('master');
+
+        input1.addEventListener('input', function() {
+            if (input1.value === '4047') {
+                masterImage.src = 'visa.png'; 
+            } else if (input1.value === '5100') {
+                masterImage.src = 'master.png'; 
+            } else {
+                masterImage.src = 'logo.png';
+            }
+        });
+    </script>
+</body>
+</html>
